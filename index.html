@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventores Mirins - O Jogo v2</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🤖 Inventores Mirins</h1>
+  <p>O Jogo v2</p>
+</header>
+
+<div class="hud">
+  <div class="stat">Fase <span id="fase">1</span>/20</div>
+  <div class="stat">⭐ <span id="pontos">0</span></div>
+  <div class="stat">🪙 <span id="moedas">30</span></div>
+  <div class="stat" id="vidas">🔋🔋🔋</div>
+</div>
+
+<main>
+  <section class="projeto">
+    <h2 id="nome-projeto">Circuito Simples</h2>
+    <div class="meta"><span id="categoria">Eletrônica</span> • <span id="tempo">15 min</span></div>
+  </section>
+
+  <section class="bancada">
+    <h3>Bancada de Montagem</h3>
+    <div id="slots" class="slots"></div>
+  </section>
+
+  <section class="loja">
+    <div class="loja-header">
+      <h3>Loja de Peças</h3>
+      <div class="pacotes">
+        <button id="pac-peq">Pacote P (15🪙)</button>
+        <button id="pac-gra">Pacote G (35🪙)</button>
+      </div>
+    </div>
+    <div id="itens-loja" class="itens"></div>
+  </section>
+
+  <button id="concluir" class="concluir" disabled>Concluir Projeto</button>
+  <p id="mensagem" class="mensagem"></p>
+</main>
+
+<div id="gameover" class="modal hidden">
+  <div class="modal-content">
+    <h2>Curto-Circuito! ⚡</h2>
+    <p>Você usou as 3 vidas. Voltando do zero...</p>
+    <button id="reiniciar">Recomeçar</button>
+  </div>
+</div>
+
+<div id="vitoria" class="modal hidden">
+  <div class="modal-content">
+    <h2>🏆 Mestre Inventor!</h2>
+    <p>Você completou os 20 projetos!</p>
+    <p>Pontuação final: <span id="pontos-final"></span></p>
+    <button id="continuar">Continuar (loop)</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
